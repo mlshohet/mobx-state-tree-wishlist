@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./components/App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { Group } from "./models/Groups";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const wishList = WishList.create({
+//   items: [
+//     {
+//       name: "Chronicles of narnia Box Set - C.S. Lewis",
+//       price: 28.73,
+//       image:
+//         "https://images-na.ssl-images-amazon.com/images/I/51K6iSgqUqL._SX329_BO1,204,203,200_.jpg",
+//     },
+//     {
+//       name: "LEGO Mindstorm eV3",
+//       price: 349.97,
+//       image:
+//         "https://images-na.ssl-images-amazon.com/images/I/51K6iSgqUqL._SX329_BO1,204,203,200_.jpg",
+//     },
+//     {
+//       name: "Die Hard",
+//       price: 12.99,
+//       image:
+//         "https://images-na.ssl-images-amazon.com/images/I/51K6iSgqUqL._SX329_BO1,204,203,200_.jpg",
+//     },
+//   ],
+// });
+
+function renderApp() {
+ 
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById("root")
+  );
+}
+
+renderApp();
