@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import logo from "../assets/santa2.jpg";
 import WishListView from "./WishListView";
-import { Group } from "../models/Groups";
+//import { Group } from "../models/Groups";
 import { observer } from "mobx-react";
 
-const group = Group.create({ users: {} });
+//const group = Group.create({ users: {} });
 
-function App() {
+function App({ group }) {
   const [currentUser, setCurrentUser] = useState();
 
   const usersArr = [...group.users.values()];

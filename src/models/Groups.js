@@ -34,15 +34,15 @@ export const Group = types
     users: types.map(User),
   })
   .actions((self) => ({
-    async afterCreate() {
-      const users = await self.load();
-      console.log("users: ", users);
-      self.assignUsers(users);
+    afterCreate() {
+      self.load()
     },
     load: flow(function* load() {
       const response = yield window.fetch(`http://localhost:3001/users`);
-      const data = yield response.json();
-      return data;
+      applySnapshot(self.users, yield response.json());
+      // const data = yield response.json();
+
+      // return data;
     }),
     assignUsers(users) {
       self.users = users;

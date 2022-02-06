@@ -28,11 +28,12 @@ import { Group } from "./models/Groups";
 //   ],
 // });
 
-function renderApp() {
- 
+const group = Group.create({ users: {} });
+
+function renderApp() { 
   ReactDOM.render(
     <React.StrictMode>
-      <App />
+      <App group={group} />
     </React.StrictMode>,
     document.getElementById("root")
   );
